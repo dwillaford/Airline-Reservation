@@ -4,7 +4,7 @@
     <strong>One way trips</strong><asp:SqlDataSource ID="Flight_Reservation" runat="server" ConnectionString="<%$ ConnectionStrings:Airline ReservationConnectionString %>" SelectCommand="SELECT Route.Airport, Route.Destination FROM Route INNER JOIN AirFare ON Route.RtID = AirFare.Route INNER JOIN Flight_Schedules ON AirFare.AfID = Flight_Schedules.NetFare"></asp:SqlDataSource>
     </p>
 <p>
-    Flying out of:<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="Flight_Reservation" DataTextField="Airport" DataValueField="Airport" Height="25px" Width="133px" BackColor="Silver" Font-Bold="True" ForeColor="Black">
+    Flying out of:<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="Flight_Reservation" DataTextField="Airport" DataValueField="Airport" Height="25px" Width="133px" BackColor="Silver" Font-Bold="True" ForeColor="Black" DataMember="DefaultView">
     </asp:DropDownList>
 </p>
 
